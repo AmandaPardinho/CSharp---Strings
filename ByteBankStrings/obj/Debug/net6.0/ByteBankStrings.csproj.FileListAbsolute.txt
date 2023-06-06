@@ -1,0 +1,15 @@
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\CSharp---Strings\ByteBankStrings\obj\Debug\net6.0\ByteBankStrings.csproj.AssemblyReference.cache
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\CSharp---Strings\ByteBankStrings\obj\Debug\net6.0\ByteBankStrings.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\CSharp---Strings\ByteBankStrings\obj\Debug\net6.0\ByteBankStrings.AssemblyInfoInputs.cache
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\CSharp---Strings\ByteBankStrings\obj\Debug\net6.0\ByteBankStrings.AssemblyInfo.cs
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\CSharp---Strings\ByteBankStrings\obj\Debug\net6.0\ByteBankStrings.csproj.CoreCompileInputs.cache
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\CSharp---Strings\ByteBankStrings\bin\Debug\net6.0\ByteBankStrings.exe
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\CSharp---Strings\ByteBankStrings\bin\Debug\net6.0\ByteBankStrings.deps.json
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\CSharp---Strings\ByteBankStrings\bin\Debug\net6.0\ByteBankStrings.runtimeconfig.json
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\CSharp---Strings\ByteBankStrings\bin\Debug\net6.0\ByteBankStrings.dll
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\CSharp---Strings\ByteBankStrings\bin\Debug\net6.0\ByteBankStrings.pdb
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\CSharp---Strings\ByteBankStrings\obj\Debug\net6.0\ByteBankStrings.dll
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\CSharp---Strings\ByteBankStrings\obj\Debug\net6.0\refint\ByteBankStrings.dll
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\CSharp---Strings\ByteBankStrings\obj\Debug\net6.0\ByteBankStrings.pdb
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\CSharp---Strings\ByteBankStrings\obj\Debug\net6.0\ByteBankStrings.genruntimeconfig.cache
+C:\Users\AmandaMarquesPardinh\Desktop\Performa\repositorios\CSharp---Strings\ByteBankStrings\obj\Debug\net6.0\ref\ByteBankStrings.dll
