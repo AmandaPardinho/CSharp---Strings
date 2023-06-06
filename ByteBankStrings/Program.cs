@@ -25,8 +25,6 @@ namespace ByteBank.SistemaAgencia
             Console.WriteLine(string.IsNullOrEmpty(textoQualquer));
             Console.WriteLine();
 
-            ExtratorValorArgumentosURL extrator = new ExtratorValorArgumentosURL("oi");
-
             //teste do método IndexOf - char
             string url = "pagina?moedaOrigem=real&moedaDestino=dolar";
 
@@ -50,7 +48,7 @@ namespace ByteBank.SistemaAgencia
 
             //teste método Lenght
             string palavras = "moedaOrigem=real&moedaDestino=dolar";
-            string nomeArgumento = "moedaDestino";
+            string nomeArgumento = "moedaDestino=";
             
             int index = palavras.IndexOf(nomeArgumento);
             Console.WriteLine(index);
@@ -63,7 +61,32 @@ namespace ByteBank.SistemaAgencia
             Console.WriteLine();
             Console.WriteLine(palavras.Substring(index));
             Console.WriteLine();
-            Console.WriteLine(palavras.Substring(index + nomeArgumento.Length + 1));
+            Console.WriteLine(palavras.Substring(index + nomeArgumento.Length));
+            Console.WriteLine();
+
+            //teste método GetValor
+            string urlParametros = "http://www.bytebank.com/cambio?moedaOrigem=real&moedaDestino=dolar&valor=1500";
+
+            ExtratorValorArgumentosURL extratorValores = new ExtratorValorArgumentosURL(urlParametros);
+            
+            string valorMoedaDestino = extratorValores.GetValor("moedaDestino");
+            Console.WriteLine($"Valor de moedaDestino: {valorMoedaDestino}");
+            Console.WriteLine();
+
+            string valorMoedaOrigem = extratorValores.GetValor("moedaOrigem");
+            Console.WriteLine($"Valor de moedaOrigem: {valorMoedaOrigem}");
+            Console.WriteLine();
+
+            string valorDinheiro = extratorValores.GetValor("valor");
+            Console.WriteLine($"Valor de dinheiro a ser trocado: R$ {(String.Format("{0:0.00}", valorDinheiro))}");
+            Console.WriteLine();
+
+            //teste método Remove
+            string testeRemocao = "primeiraParte&parteParaRemover";
+            int indiceEComercial = testeRemocao.IndexOf('&');
+
+            Console.WriteLine(testeRemocao.Remove(indiceEComercial));
+            Console.WriteLine();
 
             Console.ReadLine();
         }
