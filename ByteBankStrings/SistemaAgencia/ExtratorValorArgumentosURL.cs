@@ -25,9 +25,21 @@ namespace ByteBankStrings.SistemaAgencia
             _argumentos = URL.Substring(indiceInterrogacao + 1);
         }
 
-        //public string GetValor(string nomeParametro)
-        //{
-        //    int indiceParametro = _argumentos.IndexOf(nomeParametro);
-        //}
+        public string GetValor(string nomeParametro)
+        {
+            string termo = nomeParametro + "="; //moedaDestino=
+            int indiceTermo = _argumentos.IndexOf(termo);
+
+            string resultado = _argumentos.Substring(indiceTermo + termo.Length); //dolar
+
+            int indiceEComercial = resultado.IndexOf('&');
+
+            if(indiceEComercial == -1)
+            {
+                return resultado;
+            }
+
+            return resultado.Remove(indiceEComercial);
+        }
     }
 }
