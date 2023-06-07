@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using ByteBankStrings.SistemaAgencia;
@@ -151,6 +152,26 @@ namespace ByteBank.SistemaAgencia
             Console.WriteLine();
             Console.WriteLine(urlTeste.Contains("ByteBank"));
             Console.WriteLine();
+
+            //teste Regex
+            /* Expressão regular =>
+             * expressões que se encontram dentro de uma determinada regra
+             * representada pela classe Regex
+             */
+            /* texto 1:
+             * ** Olá, meu nome é Guilherme e você pode entrar em contato comigo através do número 8457-4456!
+             * texto 2:
+             * ** Meu nome é Guilherme, me ligue em 4784-4546
+             */
+            string padrao = "[0123456789][0123456789][0123456789][0123456789][-][0123456789][0123456789][0123456789][0123456789]"; //expressão regular
+            string textoTeste = "Meu nome é Guilherme, me ligue em 4784-4546";
+            
+            Console.WriteLine("O texto teste possui o padrão? " + Regex.IsMatch(textoTeste, padrao));
+
+            Match resultado = Regex.Match(textoTeste, padrao);
+            Console.WriteLine($"Valor encontrado: {resultado.Value}");
+
+
 
             Console.ReadLine();
         }
