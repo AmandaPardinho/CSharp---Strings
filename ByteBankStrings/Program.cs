@@ -208,7 +208,11 @@ namespace ByteBank.SistemaAgencia
             Console.WriteLine($"Valor encontrado: {resultadoCelular2.Value}");
             Console.WriteLine();
 
-            //classe object
+            /*classe object
+             * toda classe faz referência à classe object
+             */
+            //todo método virtual pode ser sobrescrito
+             
             Console.WriteLine("Olá, mundo!");
             Console.WriteLine(123);
             Console.WriteLine(10.5);
@@ -226,6 +230,36 @@ namespace ByteBank.SistemaAgencia
             //Console.WriteLine(conta);
             Console.WriteLine();
 
+            //método Equals
+            Cliente carlos_1 = new Cliente();
+            carlos_1.Nome = "Carlos";
+            carlos_1.CPF = "123.654.789-99";
+            carlos_1.Profissao = "Designer";
+
+            Cliente carlos_2 = new Cliente();
+            carlos_2.Nome = "Carlos";
+            carlos_2.CPF = "123.654.789-99";
+            carlos_2.Profissao = "Designer";
+
+            if(carlos_1 == carlos_2)
+            {
+                Console.WriteLine("São iguais!");
+            }
+            else
+            {
+                Console.WriteLine("São diferentes!"); //Resposta dessa condição
+            }
+            Console.WriteLine();
+
+            if (carlos_1.Equals(carlos_2))
+            {
+                Console.WriteLine("São iguais!"); //Resposta dessa condição após sobrescrever o método Equals
+            }
+            else
+            {
+                Console.WriteLine("São diferentes!"); 
+            }
+            Console.WriteLine();
 
             Console.ReadLine();
         }
