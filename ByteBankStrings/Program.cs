@@ -157,20 +157,53 @@ namespace ByteBank.SistemaAgencia
             /* Expressão regular =>
              * expressões que se encontram dentro de uma determinada regra
              * representada pela classe Regex
+             * a definição do padrão não precisa conter todos os componentes do intervalo; basta o primeiro elemento e o último, separados por um hífen
+             * ** A definição dos elementos se baseia na Tabela ASCII
+             * ** se um padrão se repetir mais de uma vez, é possível determinar o número de vezes (quantificador) entre chaves após o padrão
              */
             /* texto 1:
              * ** Olá, meu nome é Guilherme e você pode entrar em contato comigo através do número 8457-4456!
              * texto 2:
              * ** Meu nome é Guilherme, me ligue em 4784-4546
              */
-            string padrao = "[0123456789][0123456789][0123456789][0123456789][-][0123456789][0123456789][0123456789][0123456789]"; //expressão regular
+            //string padrao = [0123456789][0123456789][0123456789][0123456789][-][0123456789][0123456789][0123456789][0123456789]; //expressão regular
+            //string padrao = [0-9][0-9][0-9][0-9][-][0-9][0-9][0-9][0-9];
+            string padrao = "[0-9]{4}[-][0-9]{4}"; 
             string textoTeste = "Meu nome é Guilherme, me ligue em 4784-4546";
             
             Console.WriteLine("O texto teste possui o padrão? " + Regex.IsMatch(textoTeste, padrao));
+            Console.WriteLine();
 
             Match resultado = Regex.Match(textoTeste, padrao);
             Console.WriteLine($"Valor encontrado: {resultado.Value}");
+            Console.WriteLine();
 
+            //minha resolução
+            string textoTeste2 = "Meu nome é Guilherme, me ligue em 94784-4546";
+            string padraoCelular = "[9][0-9]{4}[-][0-9]{4}";
+
+            Console.WriteLine("O novo texto possui esse padrão? " + Regex.IsMatch(textoTeste2, padraoCelular));
+            Console.WriteLine();
+
+            Match resultadoCelular = Regex.Match(textoTeste2, padraoCelular);
+            Console.WriteLine($"Valor encontrado: {resultadoCelular.Value}");
+            Console.WriteLine();
+
+            //resolução do professor
+            string textoTeste3 = "Meu nome é Guilherme, me ligue em 94784-4546";
+            //string padraoCelular2 = "[0-9]{4,5}[-][0-9]{4}";
+            //string textoTeste3 = "Meu nome é Guilherme, me ligue em 947844546";
+            //string padraoCelular2 = "[0-9]{4,5}[-]{0,1}[0-9]{4}";
+            string padraoCelular2 = "[0-9]{4,5}-?[0-9]{4}";
+                //não pode ter espaço depois da vírgula
+                //a vírgula tem valor de "OU"
+
+            Console.WriteLine("O novo texto possui esse padrão? " + Regex.IsMatch(textoTeste3, padraoCelular2));
+            Console.WriteLine();
+
+            Match resultadoCelular2 = Regex.Match(textoTeste3, padraoCelular2);
+            Console.WriteLine($"Valor encontrado: {resultadoCelular2.Value}");
+            Console.WriteLine();
 
 
             Console.ReadLine();
