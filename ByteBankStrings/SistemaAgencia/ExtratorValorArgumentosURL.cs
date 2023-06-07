@@ -27,8 +27,11 @@ namespace ByteBankStrings.SistemaAgencia
 
         public string GetValor(string nomeParametro)
         {
+            nomeParametro = nomeParametro.ToUpper();
+            string argumentoEmCaixaAlta = _argumentos.ToUpper();
+
             string termo = nomeParametro + "="; //moedaDestino=
-            int indiceTermo = _argumentos.IndexOf(termo);
+            int indiceTermo = argumentoEmCaixaAlta.IndexOf(termo);
 
             string resultado = _argumentos.Substring(indiceTermo + termo.Length); //dolar
 
