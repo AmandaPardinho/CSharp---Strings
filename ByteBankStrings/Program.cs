@@ -126,7 +126,31 @@ namespace ByteBank.SistemaAgencia
             Console.WriteLine($"Valor de dinheiro a ser trocado: R$ {(String.Format("{0:0.00}", valorDinheiro1))}");
             Console.WriteLine();
 
+            //teste métodos StartsWith, EndsWith e Contains
+            string urlTeste = "http://www.bytebank.com/cambio";
+            int indiceByteBank = urlTeste.IndexOf("http://www.bytebank.com/cambio");
 
+            Console.WriteLine(indiceByteBank == 0);
+            Console.WriteLine();
+
+            /* StartsWith e EndsWith => 
+             * métodos usados sempre que o índice não for importante
+             * retornam um booleano
+             */
+            Console.WriteLine(urlTeste.StartsWith("http://www.bytebank.com"));
+            Console.WriteLine();
+
+            Console.WriteLine(urlTeste.EndsWith("cambio"));
+            Console.WriteLine();
+
+            /* Contains =>
+             * retorna um booleano
+             * indica se uma determinada subcadeia de caracteres está contida na cadeia de caracteres especificada
+             */
+            Console.WriteLine(urlTeste.Contains("bytebank"));
+            Console.WriteLine();
+            Console.WriteLine(urlTeste.Contains("ByteBank"));
+            Console.WriteLine();
 
             Console.ReadLine();
         }
