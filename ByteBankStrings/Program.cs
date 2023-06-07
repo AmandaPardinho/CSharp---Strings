@@ -88,6 +88,46 @@ namespace ByteBank.SistemaAgencia
             Console.WriteLine(testeRemocao.Remove(indiceEComercial));
             Console.WriteLine();
 
+            //teste métodos Replace, ToUpper, ToLower
+            string mensagemOrigem = "PALAVRA";
+            string termoBusca = "ra";
+
+            termoBusca = termoBusca.Replace('r', 'R');
+            Console.WriteLine(termoBusca);
+            Console.WriteLine();
+
+            termoBusca = termoBusca.Replace('a', 'A');
+            Console.WriteLine(termoBusca);
+            Console.WriteLine();
+
+            Console.WriteLine(mensagemOrigem.IndexOf(termoBusca));
+            Console.WriteLine();
+
+            Console.WriteLine(termoBusca.ToUpper());
+            Console.WriteLine();
+
+            Console.WriteLine(mensagemOrigem.ToLower());
+            Console.WriteLine();
+
+            //teste método GetValor com tudo em maiúsculo
+            string urlParametros1 = "http://www.bytebank.com/cambio?moedaOrigem=real&moedaDestino=dolar&valor=1500";
+
+            ExtratorValorArgumentosURL extratorValores1 = new ExtratorValorArgumentosURL(urlParametros1);
+
+            string valorMoedaDestino1 = extratorValores1.GetValor("moedaDestino");
+            Console.WriteLine($"Valor de moedaDestino: {valorMoedaDestino1}");
+            Console.WriteLine();
+
+            string valorMoedaOrigem1 = extratorValores1.GetValor("moedaOrigem");
+            Console.WriteLine($"Valor de moedaOrigem: {valorMoedaOrigem1}");
+            Console.WriteLine();
+
+            string valorDinheiro1 = extratorValores1.GetValor("VALOR");
+            Console.WriteLine($"Valor de dinheiro a ser trocado: R$ {(String.Format("{0:0.00}", valorDinheiro1))}");
+            Console.WriteLine();
+
+
+
             Console.ReadLine();
         }
     }
