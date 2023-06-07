@@ -6,6 +6,8 @@ using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
+using ByteBankStrings.Modelos.Conta;
+using ByteBankStrings.Modelos.Funcionarios;
 using ByteBankStrings.SistemaAgencia;
 
 namespace ByteBank.SistemaAgencia
@@ -197,12 +199,31 @@ namespace ByteBank.SistemaAgencia
             string padraoCelular2 = "[0-9]{4,5}-?[0-9]{4}";
                 //não pode ter espaço depois da vírgula
                 //a vírgula tem valor de "OU"
+                //a substituição pela interrogação funciona apenas para {0,1}
 
             Console.WriteLine("O novo texto possui esse padrão? " + Regex.IsMatch(textoTeste3, padraoCelular2));
             Console.WriteLine();
 
             Match resultadoCelular2 = Regex.Match(textoTeste3, padraoCelular2);
             Console.WriteLine($"Valor encontrado: {resultadoCelular2.Value}");
+            Console.WriteLine();
+
+            //classe object
+            Console.WriteLine("Olá, mundo!");
+            Console.WriteLine(123);
+            Console.WriteLine(10.5);
+            Console.WriteLine(true);
+            Console.WriteLine();
+
+            object conta = new ContaCorrente(456, 687876);
+            object desenvolvedor = new Desenvolvedor("4564564");
+            Console.WriteLine();
+
+            string contaToString = conta.ToString();
+            Console.WriteLine();
+
+            Console.WriteLine($"Resultado: {contaToString}");
+            //Console.WriteLine(conta);
             Console.WriteLine();
 
 
