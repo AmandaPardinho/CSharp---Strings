@@ -1,2 +1,2 @@
 # CSharp---Strings
-Curso Alura
+Curso Alura sobre manipulaçao de strings 
